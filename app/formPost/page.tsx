@@ -6,6 +6,8 @@ const FormPostPage = () => {
 	const addTodo = async (data: FormData) => {
 		'use server'
 
+		await new Promise((resolve) => setTimeout(resolve, 3000))
+
 		const todo = data.get('todo') as string
 
 		todos.push(todo)
