@@ -1,6 +1,14 @@
 const todos: string[] = ['Impala']
 
 export default function Home() {
+	const addTodo = async (data: FormData) => {
+		'use server'
+
+		const todo = data.get('todo') as string
+
+		todos.push(todo)
+	}
+
 	return (
 		<main className='min-h-screen p-24'>
 			<h1 className='text-4xl font-bold'>Todos</h1>
@@ -9,7 +17,7 @@ export default function Home() {
 					return <li key={index}>{todo}</li>
 				})}
 			</ul>
-			<form>
+			<form action={addTodo}>
 				<input
 					type='text'
 					name='todo'
