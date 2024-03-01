@@ -1,4 +1,4 @@
-const todos: string[] = []
+const todos: string[] = ['Impala']
 
 export default function Home() {
 	return (
