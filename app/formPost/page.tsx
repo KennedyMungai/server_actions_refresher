@@ -4,12 +4,10 @@ import AddButton from './addButton'
 const todos: string[] = ['Impala']
 
 const FormPostPage = () => {
-	const addTodo = async (data: FormData) => {
+	const addTodo = async (todo: string) => {
 		'use server'
 
 		await new Promise((resolve) => setTimeout(resolve, 3000))
-
-		const todo = data.get('todo') as string
 
 		todos.push(todo)
 
@@ -24,14 +22,14 @@ const FormPostPage = () => {
 					return <li key={index}>{todo}</li>
 				})}
 			</ul>
-			<form action={addTodo}>
+			<div>
 				<input
 					type='text'
 					name='todo'
 					className='border border-gray-300 rounded-lg py-4 px-4 text-base text-black'
 				/>
-				<AddButton />
-			</form>
+				<AddButton addTodo={addTodo} />
+			</div>
 		</main>
 	)
 }
