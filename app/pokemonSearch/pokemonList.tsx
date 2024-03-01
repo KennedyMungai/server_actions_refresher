@@ -12,7 +12,7 @@ const PokemonList = ({ search }: Props) => {
 		search('').then((names) => setPokemonNames(names))
 	}, [search])
 
-	return <div>PokemonList</div>
+	return <div className='text-4xl py-5'>Names: {pokemonNames.join(", ")}</div>
 }
 
 export default PokemonList
