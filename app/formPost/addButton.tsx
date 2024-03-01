@@ -2,9 +2,11 @@
 import React from 'react'
 import { useFormStatus } from 'react-dom'
 
-type Props = {}
+type Props = {
+    addTodo: (todo: string) => {}
+}
 
-const AddButton = (props: Props) => {
+const AddButton = ({addTodo}: Props) => {
 	const { pending } = useFormStatus()
 
 	return (
