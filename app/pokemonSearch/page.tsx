@@ -1,4 +1,5 @@
 import React from 'react'
+import PokemonList from './pokemonList'
 
 type Props = {}
 
@@ -20,7 +21,7 @@ const PokemonSearch = (props: Props) => {
 			.slice(0, 50)
 	}
 
-	return <div>PokemonSearch</div>
+	return <PokemonList search={search} />
 }
 
 export default PokemonSearch

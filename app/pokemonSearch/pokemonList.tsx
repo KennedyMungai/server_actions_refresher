@@ -1,7 +1,9 @@
 'use client'
 import React, { useState } from 'react'
 
-type Props = {}
+type Props = {
+    search: (search: string) => Promise<string[]>
+}
 
 const PokemonList = (props: Props) => {
 	const [pokemonNames, setPokemonNames] = useState<string[]>([])
