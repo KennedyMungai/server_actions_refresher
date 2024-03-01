@@ -10,7 +10,7 @@ const AddButton = ({ addTodo }: Props) => {
 	const { pending } = useFormStatus()
 
 	return (
-		<>
+		<div>
 			<input
 				type='text'
 				name='todo'
@@ -23,7 +23,7 @@ const AddButton = ({ addTodo }: Props) => {
 			>
 				Submit
 			</button>
-		</>
+		</div>
 	)
 }
 
