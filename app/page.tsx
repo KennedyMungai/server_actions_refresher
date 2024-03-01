@@ -1,3 +1,5 @@
+import { revalidatePath } from "next/cache"
+
 const todos: string[] = ['Impala']
 
 export default function Home() {
@@ -7,6 +9,8 @@ export default function Home() {
 		const todo = data.get('todo') as string
 
 		todos.push(todo)
+
+    revalidatePath('/')
 	}
 
 	return (
