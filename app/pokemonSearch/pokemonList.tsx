@@ -1,9 +1,11 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 
 type Props = {}
 
 const PokemonList = (props: Props) => {
+	const [pokemonNames, setPokemonNames] = useState<string[]>([])
+
 	return <div>PokemonList</div>
 }
 
